@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kizomba Healing | Yanira Mendoza</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Lato', sans-serif; }
+        h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
+        html { scroll-behavior: smooth; }
+    </style>
+    <script>
+        // Simpel funktion til at styre mobil-menuen
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</head>
+<body class="bg-pink-50 text-gray-800 antialiased selection:bg-purple-300 selection:text-purple-900">
+
+    <nav class="fixed w-full z-50 top-0 bg-white/90 backdrop-blur-md shadow-sm border-b border-pink-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="font-serif text-2xl font-bold text-purple-900 tracking-wider">Kizomba Healing</a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#om" class="text-gray-600 hover:text-pink-500 transition duration-300">La Filosofía</a>
+                    <a href="#metodologi" class="text-gray-600 hover:text-pink-500 transition duration-300">Metodología</a>
+                    <a href="#vlogs" class="text-gray-600 hover:text-pink-500 transition duration-300">Vlogs</a>
+                    <a href="#priser" class="text-gray-600 hover:text-pink-500 transition duration-300">Oferta</a>
+                    <a href="#kontakt" class="bg-gradient-to-r from-purple-600 to-pink-500 text-white px-6 py-2 rounded-full hover:shadow-lg hover:scale-105 transition transform duration-300">Contacto</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button onclick="toggleMenu()" class="text-purple-900 focus:outline-none">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-pink-100">
+            <a href="#om" onclick="toggleMenu()" class="block px-4 py-3 text-gray-600 hover:bg-pink-50">La Filosofía</a>
+            <a href="#metodologi" onclick="toggleMenu()" class="block px-4 py-3 text-gray-600 hover:bg-pink-50">Metodología</a>
+            <a href="#vlogs" onclick="toggleMenu()" class="block px-4 py-3 text-gray-600 hover:bg-pink-50">Vlogs</a>
+            <a href="#priser" onclick="toggleMenu()" class="block px-4 py-3 text-gray-600 hover:bg-pink-50">Oferta</a>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-20 px-4 min-h-[80vh] flex items-center bg-gradient-to-br from-pink-100 via-white to-purple-100 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
+            <div class="space-y-6">
+                <h2 class="text-pink-500 font-semibold tracking-widest uppercase text-sm">Por Yanira Mendoza</h2>
+                <h1 class="text-5xl md:text-6xl font-serif font-bold text-purple-900 leading-tight">
+                    El arte de la sanación a través del abrazo
+                </h1>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    KIZOMBA HEALING es el puente entre el ritmo que golpea el cuerpo y la energía que eleva el alma. No enseñamos sólo para llenar una pista, sino para vaciar la mente.
+                </p>
+                <div class="pt-4">
+                    <a href="#vlogs" class="inline-block bg-purple-900 text-white px-8 py-4 rounded-full shadow-xl hover:bg-pink-600 transition duration-300 text-lg">Descubre los Vlogs</a>
+                </div>
+            </div>
+            <div class="relative h-96 rounded-3xl overflow-hidden shadow-2xl bg-purple-200 group">
+                <div class="absolute inset-0 bg-cover bg-center transition duration-500 group-hover:scale-105" style="background-image: url('https://images.unsplash.com/photo-1547153760-18fc86324498?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80');"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-purple-900/60 to-transparent"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="om" class="py-20 px-4 bg-white">
+        <div class="max-w-4xl mx-auto text-center space-y-8">
+            <h2 class="text-4xl font-serif text-purple-900">Un problema VS una solución</h2>
+            <p class="text-xl text-gray-600 leading-relaxed">
+                ¿No te parece curioso que en la era de "conexión digital" la gente esté más desconectada y sola que nunca? El estrés, la ansiedad, el día a día...
+            </p>
+            <p class="text-xl text-pink-600 font-medium">
+                ¿Y si te digo que he desarrollado un método con el que sanar a través de la música y el baile? <br>¡LA KIZOMBA ES PERFECTA PARA ESTO!
+            </p>
+        </div>
+    </section>
+
+    <section id="vlogs" class="py-20 px-4 bg-purple-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-serif text-purple-900 mb-4">Vlog Interactivo</h2>
+                <p class="text-gray-600">Aprende, sana y conecta a través de mis videos.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group cursor-pointer hover:-translate-y-2 transition duration-300">
+                    <div class="h-56 bg-pink-200 relative">
+                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1518609878373-06d740f60d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition">
+                            <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center text-pink-500 pl-1">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sm text-pink-500 font-semibold mb-2">Episodio 1</p>
+                        <h3 class="text-xl font-serif text-purple-900 mb-3">Toma de Tierra y Respiración</h3>
+                        <p class="text-gray-600 text-sm">Descubre cómo el grounding al ritmo del beat te ayuda a conectar con el presente.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group cursor-pointer hover:-translate-y-2 transition duration-300">
+                    <div class="h-56 bg-purple-200 relative">
+                         <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+                         <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition">
+                            <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center text-pink-500 pl-1">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sm text-pink-500 font-semibold mb-2">Episodio 2</p>
+                        <h3 class="text-xl font-serif text-purple-900 mb-3">La Magia del Abrazo</h3>
+                        <p class="text-gray-600 text-sm">Cómo reducir el cortisol y generar oxitocina a través de la coregulación.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group cursor-pointer hover:-translate-y-2 transition duration-300">
+                    <div class="h-56 bg-pink-300 relative">
+                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition">
+                            <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center text-pink-500 pl-1">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sm text-pink-500 font-semibold mb-2">Episodio 3</p>
+                        <h3 class="text-xl font-serif text-purple-900 mb-3">Flujo y Liberación</h3>
+                        <p class="text-gray-600 text-sm">Kizomba social integrando herramientas de sanación con base de thetahealing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="metodologi" class="py-24 px-4 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-serif text-purple-900 mb-4">La Metodología</h2>
+                <div class="w-24 h-1 bg-pink-300 mx-auto rounded-full"></div>
+                <p class="text-gray-500 mt-6 max-w-2xl mx-auto">Un viaje de cuatro pasos para conectar el cuerpo, la mente y el alma a través del abrazo y el ritmo.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="relative bg-purple-50 p-8 rounded-3xl border border-purple-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300 overflow-hidden group">
+                    <span class="absolute -right-4 -bottom-6 text-9xl font-serif font-bold text-white opacity-70 group-hover:scale-110 transition duration-500">1</span>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-pink-200 text-pink-700 rounded-full flex items-center justify-center font-bold text-xl mb-6 shadow-sm">1</div>
+                        <h4 class="text-xl font-semibold text-purple-900 mb-1">Apertura</h4>
+                        <p class="text-sm text-pink-500 font-medium mb-4">Enraizamiento</p>
+                        <p class="text-gray-600 leading-relaxed">Toma de tierra, respiración y grounding a ritmo de beat.</p>
+                    </div>
+                </div>
+
+                <div class="relative bg-pink-50 p-8 rounded-3xl border border-pink-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300 overflow-hidden group mt-0 lg:mt-8">
+                    <span class="absolute -right-4 -bottom-6 text-9xl font-serif font-bold text-white opacity-70 group-hover:scale-110 transition duration-500">2</span>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-purple-200 text-purple-700 rounded-full flex items-center justify-center font-bold text-xl mb-6 shadow-sm">2</div>
+                        <h4 class="text-xl font-semibold text-purple-900 mb-1">Conexión</h4>
+                        <p class="text-sm text-pink-500 font-medium mb-4">Individual</p>
+                        <p class="text-gray-600 leading-relaxed">Técnica de baile enfocada en el eje propio y el equilibrio emocional.</p>
+                    </div>
+                </div>
+
+                <div class="relative bg-purple-50 p-8 rounded-3xl border border-purple-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300 overflow-hidden group">
+                    <span class="absolute -right-4 -bottom-6 text-9xl font-serif font-bold text-white opacity-70 group-hover:scale-110 transition duration-500">3</span>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-pink-200 text-pink-700 rounded-full flex items-center justify-center font-bold text-xl mb-6 shadow-sm">3</div>
+                        <h4 class="text-xl font-semibold text-purple-900 mb-1">El abrazo</h4>
+                        <p class="text-sm text-pink-500 font-medium mb-4">Co-regulación</p>
+                        <p class="text-gray-600 leading-relaxed">Aplicación de técnicas de terapia de contacto para reducir el cortisol y generar oxitocina.</p>
+                    </div>
+                </div>
+
+                <div class="relative bg-pink-50 p-8 rounded-3xl border border-pink-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300 overflow-hidden group mt-0 lg:mt-8">
+                    <span class="absolute -right-4 -bottom-6 text-9xl font-serif font-bold text-white opacity-70 group-hover:scale-110 transition duration-500">4</span>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-purple-200 text-purple-700 rounded-full flex items-center justify-center font-bold text-xl mb-6 shadow-sm">4</div>
+                        <h4 class="text-xl font-semibold text-purple-900 mb-1">Liberación</h4>
+                        <p class="text-sm text-pink-500 font-medium mb-4">Flujo</p>
+                        <p class="text-gray-600 leading-relaxed">Kizomba social integrando herramientas de sanación con base de thetahealing.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-4 bg-purple-900 text-white relative">
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 opacity-90"></div>
+        
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif text-pink-100 mb-4">Beneficios para el Evento</h2>
+                <p class="text-purple-300 text-lg">Por qué incorporar Kizomba Healing en tu próximo taller</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-3xl hover:bg-white/20 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-4xl mb-6 bg-white/20 w-16 h-16 rounded-2xl flex items-center justify-center shadow-inner">✨</div>
+                    <h4 class="text-2xl font-semibold text-pink-200 mb-3">Diferenciación</h4>
+                    <p class="text-purple-100 leading-relaxed">Concepto único que nadie más ofrece. Tu evento adquiere otro nivel y se distingue del resto.</p>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-3xl hover:bg-white/20 transition duration-300 transform hover:-translate-y-1 md:-translate-y-4">
+                    <div class="text-4xl mb-6 bg-white/20 w-16 h-16 rounded-2xl flex items-center justify-center shadow-inner">🌿</div>
+                    <h4 class="text-2xl font-semibold text-pink-200 mb-3">Bienestar</h4>
+                    <p class="text-purple-100 leading-relaxed">Los alumnos terminan el taller renovados, sintiéndose mejor consigo mismos, hablando de él y de tu evento.</p>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-3xl hover:bg-white/20 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-4xl mb-6 bg-white/20 w-16 h-16 rounded-2xl flex items-center justify-center shadow-inner">🤝</div>
+                    <h4 class="text-2xl font-semibold text-pink-200 mb-3">Comunidad</h4>
+                    <p class="text-purple-100 leading-relaxed">Crea vínculos reales, profundos y duraderos entre los participantes. ¡No lo olvidarán!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="kontakt" class="bg-gray-900 text-white py-12 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="text-center md:text-left mb-6 md:mb-0">
+                <h3 class="text-2xl font-serif font-bold text-pink-400">Kizomba Healing</h3>
+                <p class="text-gray-400 mt-2">Profesora de kizomba con 6 años de experiencia.<br>Terapeuta Holística.</p>
+            </div>
+            <div class="text-center md:text-right">
+                <a href="mailto:info.yanira.mendoza@gmail.com" class="inline-block border border-pink-500 text-pink-400 px-6 py-2 rounded-full hover:bg-pink-500 hover:text-white transition">
+                    info.yanira.mendoza@gmail.com
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
