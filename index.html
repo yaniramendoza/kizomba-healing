@@ -11,13 +11,7 @@
         h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
         html { scroll-behavior: smooth; }
     </style>
-    <script>
-        // Simpel funktion til at styre mobil-menuen
-        function toggleMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        }
-    </script>
+    <script src="script.js" defer></script>
 </head>
 <body class="bg-pink-50 text-gray-800 antialiased selection:bg-purple-300 selection:text-purple-900">
 
@@ -52,7 +46,7 @@
     <section class="pt-32 pb-20 px-4 min-h-[80vh] flex items-center bg-gradient-to-br from-pink-100 via-white to-purple-100 relative overflow-hidden">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
             <div class="space-y-6">
-                <h2 class="text-pink-500 font-semibold tracking-widest uppercase text-sm">Por Yanira Mendoza</h2>
+                <h2 class="text-pink-500 font-semibold tracking-widest uppercase text-sm">Yanira Mendoza</h2>
                 <h1 class="text-5xl md:text-6xl font-serif font-bold text-purple-900 leading-tight">
                     El arte de la sanación a través del abrazo
                 </h1>
@@ -64,7 +58,7 @@
                 </div>
             </div>
             <div class="relative h-96 rounded-3xl overflow-hidden shadow-2xl bg-purple-200 group">
-                <div class="absolute inset-0 bg-cover bg-center transition duration-500 group-hover:scale-105" style="background-image: url('https://images.unsplash.com/photo-1547153760-18fc86324498?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80');"></div>
+                <div class="absolute inset-0 bg-cover bg-center transition duration-500 group-hover:scale-105" style="background-image: url('images/mainposter.jpg');"></div>
                 <div class="absolute inset-0 bg-gradient-to-t from-purple-900/60 to-transparent"></div>
             </div>
         </div>
@@ -90,9 +84,9 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group cursor-pointer hover:-translate-y-2 transition duration-300">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group cursor-pointer hover:-translate-y-2 transition duration-300" onclick="openVideoModal('videos/episodio1.mp4')">
                     <div class="h-56 bg-pink-200 relative">
-                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1518609878373-06d740f60d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/vlog1-thumb.jpg');"></div>
                         <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition">
                             <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center text-pink-500 pl-1">
                                 <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z"></path></svg>
@@ -106,9 +100,9 @@
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group cursor-pointer hover:-translate-y-2 transition duration-300">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group cursor-pointer hover:-translate-y-2 transition duration-300" onclick="openVideoModal('videos/episodio2.mp4')">
                     <div class="h-56 bg-purple-200 relative">
-                         <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+                         <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/vlog2-thumb.jpg');"></div>
                          <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition">
                             <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center text-pink-500 pl-1">
                                 <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z"></path></svg>
@@ -122,9 +116,9 @@
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group cursor-pointer hover:-translate-y-2 transition duration-300">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group cursor-pointer hover:-translate-y-2 transition duration-300" onclick="openVideoModal('videos/episodio3.mp4')">
                     <div class="h-56 bg-pink-300 relative">
-                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/vlog3-thumb.jpg');"></div>
                         <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition">
                             <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center text-pink-500 pl-1">
                                 <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z"></path></svg>
@@ -239,6 +233,18 @@
             </div>
         </div>
     </footer>
+
+    <div id="videoModal" class="fixed inset-0 z-[100] hidden bg-black/90 flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
+        <button id="closeModalBtn" class="absolute top-6 right-6 text-white hover:text-pink-500 transition">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+        <div class="w-full max-w-4xl bg-black rounded-xl overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300" id="videoContainer">
+            <video id="vlogVideoPlayer" class="w-full h-auto outline-none" controls>
+                <source src="" type="video/mp4">
+                Tu navegador no soporta el formato de video.
+            </video>
+        </div>
+    </div>
 
 </body>
 </html>
