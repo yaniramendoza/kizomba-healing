@@ -52,6 +52,23 @@ const translations = {
         met4_s: "Flujo",
         met4_d: "Kizomba social integrando herramientas de sanación con base de thetahealing.",
 
+        // Oferta / Pricing Section (NY!)
+        of_title: "Oferta de Talleres",
+        of_subtitle: "Elige el formato perfecto para tu evento o festival",
+        of_1_title: "Taller Iniciación",
+        of_1_time: "60 Minutos",
+        of_1_desc: "Una introducción perfecta al mundo del Kizomba Healing. Ideal para grupos que buscan conectar con su cuerpo y respiración por primera vez.",
+        of_2_title: "Workshop Intensivo",
+        of_2_time: "120 Minutos",
+        of_2_desc: "Un viaje profundo a través de la metodología completa. Combina la técnica de baile con co-regulación, liberación emocional y fluidez total.",
+        of_3_title: "VIP Workshop",
+        of_3_time: "90 Minutos",
+        of_3_badge: "Solo Festivales",
+        of_3_desc: "Experiencia exclusiva diseñada específicamente para festivales. Una masterclass única para elevar la energía del evento al máximo nivel.",
+        of_badge: "Más Solicitado",
+        btn_consultar: "Consultar",
+        btn_consultar_main: "Solicitar Información",
+
         // Benefits Section
         ben_title: "Beneficios para el Evento",
         ben_sub: "Por qué incorporar Kizomba Healing en tu próximo taller",
@@ -118,6 +135,23 @@ const translations = {
         met4_s: "Flow",
         met4_d: "Social Kizomba integrating healing tools based on Thetahealing.",
 
+        // Oferta / Pricing Section (NY!)
+        of_title: "Workshop Offers",
+        of_subtitle: "Choose the perfect format for your event or festival",
+        of_1_title: "Beginner Workshop",
+        of_1_time: "60 Minutes",
+        of_1_desc: "A perfect introduction to the world of Kizomba Healing. Ideal for groups looking to connect with their body and breath for the first time.",
+        of_2_title: "Intensive Workshop",
+        of_2_time: "120 Minutes",
+        of_2_desc: "A deep journey through the complete methodology. Combines dance technique with co-regulation, emotional release, and total fluidity.",
+        of_3_title: "VIP Workshop",
+        of_3_time: "90 Minutes",
+        of_3_badge: "Festivals Only",
+        of_3_desc: "Exclusive experience designed specifically for festivals. A unique masterclass to elevate the energy of the event to the maximum level.",
+        of_badge: "Most Requested",
+        btn_consultar: "Inquire",
+        btn_consultar_main: "Request Info",
+
         // Benefits Section
         ben_title: "Benefits for your Event",
         ben_sub: "Why incorporate Kizomba Healing into your next workshop",
@@ -139,7 +173,6 @@ function setLanguage(lang) {
     currentLang = lang;
     localStorage.setItem('kizombaLang', lang);
 
-    // Oversæt alle data-i18n elementer
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (translations[lang][key]) {
@@ -147,7 +180,6 @@ function setLanguage(lang) {
         }
     });
 
-    // Skift flagene i menuen, så de viser det AKTIVE sprog
     document.querySelectorAll('.lang-flag-img').forEach(img => {
         img.src = lang === 'es' ? 'https://flagcdn.com/w40/es.png' : 'https://flagcdn.com/w40/gb.png';
     });
@@ -157,7 +189,6 @@ function toggleLanguage() {
     setLanguage(currentLang === 'es' ? 'en' : 'es');
 }
 
-// Initialiser når siden loader
 document.addEventListener('DOMContentLoaded', () => {
     setLanguage(currentLang);
 });
