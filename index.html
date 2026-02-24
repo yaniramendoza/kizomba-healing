@@ -10,10 +10,10 @@
         body { font-family: 'Lato', sans-serif; }
         h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
         html { scroll-behavior: smooth; }
-        /* Skjuler scrollbar på den indlejrede Genially-blok, men bevarer funktionen */
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
+    <script src="translations.js" defer></script>
     <script src="script.js" defer></script>
 </head>
 <body class="bg-pink-50 text-gray-800 antialiased selection:bg-purple-300 selection:text-purple-900">
@@ -24,14 +24,21 @@
                 <div class="flex-shrink-0 flex items-center">
                     <a href="#" class="font-serif text-2xl font-bold text-purple-900 tracking-wider">Kizomba Healing</a>
                 </div>
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#om" class="text-gray-600 hover:text-pink-500 transition duration-300">La Filosofía</a>
-                    <a href="#metodologi" class="text-gray-600 hover:text-pink-500 transition duration-300">Metodología</a>
-                    <a href="#vlogs" class="text-gray-600 hover:text-pink-500 transition duration-300">Vlogs</a>
-                    <a href="#priser" class="text-gray-600 hover:text-pink-500 transition duration-300">Oferta</a>
-                    <a href="#kontakt" class="bg-gradient-to-r from-purple-600 to-pink-500 text-white px-6 py-2 rounded-full hover:shadow-lg hover:scale-105 transition transform duration-300">Contacto</a>
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="#om" data-i18n="nav_filo" class="text-gray-600 hover:text-pink-500 transition duration-300">La Filosofía</a>
+                    <a href="#metodologi" data-i18n="nav_metodo" class="text-gray-600 hover:text-pink-500 transition duration-300">Metodología</a>
+                    <a href="#vlogs" data-i18n="nav_vlogs" class="text-gray-600 hover:text-pink-500 transition duration-300">Vlogs</a>
+                    <a href="#priser" data-i18n="nav_oferta" class="text-gray-600 hover:text-pink-500 transition duration-300">Oferta</a>
+                    <a href="#kontakt" data-i18n="nav_contacto" class="bg-gradient-to-r from-purple-600 to-pink-500 text-white px-6 py-2 rounded-full hover:shadow-lg hover:scale-105 transition transform duration-300">Contacto</a>
+                    
+                    <button onclick="toggleLanguage()" class="flex items-center hover:opacity-70 border-l border-pink-200 pl-4 ml-2 transition" title="Cambiar idioma / Change language">
+                        <img src="https://flagcdn.com/w40/gb.png" class="lang-flag-img w-7 h-auto rounded-sm shadow-sm" alt="Language">
+                    </button>
                 </div>
-                <div class="md:hidden flex items-center">
+                <div class="md:hidden flex items-center space-x-4">
+                    <button onclick="toggleLanguage()" class="flex items-center hover:opacity-70 transition">
+                        <img src="https://flagcdn.com/w40/gb.png" class="lang-flag-img w-7 h-auto rounded-sm shadow-sm" alt="Language">
+                    </button>
                     <button onclick="toggleMenu()" class="text-purple-900 focus:outline-none">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                     </button>
@@ -39,10 +46,10 @@
             </div>
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-pink-100">
-            <a href="#om" onclick="toggleMenu()" class="block px-4 py-3 text-gray-600 hover:bg-pink-50">La Filosofía</a>
-            <a href="#metodologi" onclick="toggleMenu()" class="block px-4 py-3 text-gray-600 hover:bg-pink-50">Metodología</a>
-            <a href="#vlogs" onclick="toggleMenu()" class="block px-4 py-3 text-gray-600 hover:bg-pink-50">Vlogs</a>
-            <a href="#priser" onclick="toggleMenu()" class="block px-4 py-3 text-gray-600 hover:bg-pink-50">Oferta</a>
+            <a href="#om" data-i18n="nav_filo" onclick="toggleMenu()" class="block px-4 py-3 text-gray-600 hover:bg-pink-50">La Filosofía</a>
+            <a href="#metodologi" data-i18n="nav_metodo" onclick="toggleMenu()" class="block px-4 py-3 text-gray-600 hover:bg-pink-50">Metodología</a>
+            <a href="#vlogs" data-i18n="nav_vlogs" onclick="toggleMenu()" class="block px-4 py-3 text-gray-600 hover:bg-pink-50">Vlogs</a>
+            <a href="#priser" data-i18n="nav_oferta" onclick="toggleMenu()" class="block px-4 py-3 text-gray-600 hover:bg-pink-50">Oferta</a>
         </div>
     </nav>
 
@@ -50,90 +57,153 @@
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
             <div class="space-y-6">
                 <h2 class="text-pink-500 font-semibold tracking-widest uppercase text-sm">Yanira Mendoza</h2>
-                <h1 class="text-5xl md:text-6xl font-serif font-bold text-purple-900 leading-tight">
+                <h1 data-i18n="hero_title" class="text-5xl md:text-6xl font-serif font-bold text-purple-900 leading-tight">
                     El arte de la sanación a través del abrazo
                 </h1>
-                <p class="text-lg text-gray-600 leading-relaxed">
+                <p data-i18n="hero_desc" class="text-lg text-gray-600 leading-relaxed">
                     KIZOMBA HEALING es el puente entre el ritmo que golpea el cuerpo y la energía que eleva el alma. No enseñamos sólo para llenar una pista, sino para vaciar la mente.
                 </p>
                 <div class="pt-4">
-                    <a href="#vlogs" class="inline-block bg-purple-900 text-white px-8 py-4 rounded-full shadow-xl hover:bg-pink-600 transition duration-300 text-lg">Descubre los Vlogs</a>
+                    <a href="#vlogs" data-i18n="hero_btn" class="inline-block bg-purple-900 text-white px-8 py-4 rounded-full shadow-xl hover:bg-pink-600 transition duration-300 text-lg">Descubre los Vlogs</a>
                 </div>
             </div>
-            <div class="relative h-96 rounded-3xl overflow-hidden shadow-2xl bg-purple-200 group">
-                <div class="absolute inset-0 bg-cover bg-center transition duration-500 group-hover:scale-105" style="background-image: url('images/mainposter.jpg');"></div>
-                <div class="absolute inset-0 bg-gradient-to-t from-purple-900/60 to-transparent"></div>
+           <div class="relative h-[450px] md:h-[550px] lg:h-[650px] rounded-3xl overflow-hidden shadow-2xl bg-purple-200 group w-full">
+    <div class="absolute inset-0 bg-cover bg-top transition duration-500 group-hover:scale-105" style="background-image: url('images/mainposter.jpg');"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-purple-900/60 via-purple-900/20 to-transparent"></div>
+</div>
+        </div>
+    </section>
+
+    <section id="om" class="py-24 px-4 bg-gradient-to-b from-white to-purple-50">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="text-center mb-12">
+                <h2 data-i18n="prob_title" class="text-4xl md:text-5xl font-serif text-purple-900 mb-6">Un problema VS una solución</h2>
+                <div class="w-16 h-1 bg-purple-200 mx-auto rounded-full"></div>
             </div>
+
+            <div class="bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-purple-50 p-8 md:p-16 lg:p-24 text-center relative overflow-hidden">
+                
+                <div class="absolute -top-20 -right-20 w-64 h-64 bg-pink-50 rounded-full blur-3xl opacity-60"></div>
+                <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-purple-100 rounded-full blur-3xl opacity-60"></div>
+
+                <div class="relative z-10 space-y-10 max-w-5xl mx-auto">
+                    <p data-i18n="prob_p1" class="text-xl md:text-2xl text-gray-500 font-light leading-relaxed">
+                        ¿No te parece curioso que en la era de "conexión digital" la gente esté más desconectada y sola que nunca? El estrés, la ansiedad, el día a día...
+                    </p>
+                    
+                    <div class="flex items-center justify-center gap-6 py-4">
+                        <div class="h-px w-24 bg-gradient-to-r from-transparent to-purple-200"></div>
+                        <span class="text-purple-300 text-xl">✦</span>
+                        <div class="h-px w-24 bg-gradient-to-l from-transparent to-purple-200"></div>
+                    </div>
+
+                    <p data-i18n="prob_p2" class="text-2xl md:text-3xl lg:text-4xl text-purple-900 font-serif leading-relaxed">
+                        ¿Y si te digo que he desarrollado un método con el que sanar a través de la música y el baile? <br>¡LA KIZOMBA ES PERFECTA PARA ESTO!
+                    </p>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <section id="om" class="py-20 px-4 bg-white">
-        <div class="max-w-4xl mx-auto text-center space-y-8">
-            <h2 class="text-4xl font-serif text-purple-900">Un problema VS una solución</h2>
-            <p class="text-xl text-gray-600 leading-relaxed">
-                ¿No te parece curioso que en la era de "conexión digital" la gente esté más desconectada y sola que nunca? El estrés, la ansiedad, el día a día...
-            </p>
-            <p class="text-xl text-pink-600 font-medium">
-                ¿Y si te digo que he desarrollado un método con el que sanar a través de la música y el baile? <br>¡LA KIZOMBA ES PERFECTA PARA ESTO!
-            </p>
-        </div>
-    </section>
-
-    <section id="vlogs" class="py-20 px-4 bg-purple-50">
+    <section id="vlogs" class="py-24 px-4 bg-gradient-to-br from-purple-50 to-pink-50">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-serif text-purple-900 mb-4">Vlog Interactivo</h2>
-                <p class="text-gray-600">Aprende, sana y conecta a través de mis videos.</p>
+                <h2 data-i18n="vlog_title" class="text-5xl font-serif text-purple-900 mb-4">Vlog Interactivo</h2>
+                <div class="w-24 h-1 bg-pink-400 mx-auto rounded-full mb-6"></div>
+                <p data-i18n="vlog_sub" class="text-gray-600 text-lg">Aprende, sana y conecta a través de mis videos.</p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group cursor-pointer hover:-translate-y-2 transition duration-300" onclick="openVideoModal('videos/episodio1.mp4')">
-                    <div class="h-56 bg-pink-200 relative">
-                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/vlog1-thumb.jpg');"></div>
-                        <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition">
-                            <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center text-pink-500 pl-1">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden group cursor-pointer hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(219,112,147,0.3)] transition-all duration-500" 
+                     onclick="openVideoModal('videos/Toma de tierra.mov')"
+                     onmouseenter="this.querySelector('.preview-vid').play()"
+                     onmouseleave="this.querySelector('.preview-vid').pause(); this.querySelector('.preview-vid').currentTime = 0;">
+                    
+                    <div class="h-64 relative overflow-hidden bg-purple-900 rounded-t-3xl">
+                        <div class="absolute inset-0 bg-cover bg-center z-10 transition-opacity duration-700 group-hover:opacity-0" style="background-image: url('images/vlog1-thumb.jpg');"></div>
+                        
+                        <video class="preview-vid absolute inset-0 w-full h-full object-cover z-0 transform scale-110 group-hover:scale-100 transition-transform duration-700" muted loop playsinline>
+                            <source src="videos/Toma de tierra.mov" type="video/mp4">
+                        </video>
+                        
+                        <div class="absolute inset-0 z-20 bg-gradient-to-t from-purple-900/80 via-transparent to-transparent opacity-80 group-hover:opacity-30 transition-opacity duration-500"></div>
+                        
+                        <div class="absolute inset-0 z-30 flex items-center justify-center">
+                            <div class="w-16 h-16 bg-white/20 backdrop-blur-md border border-white/50 rounded-full flex items-center justify-center text-white pl-1 transform group-hover:scale-125 group-hover:bg-pink-500 group-hover:border-pink-500 group-hover:shadow-[0_0_30px_rgba(236,72,153,0.8)] transition-all duration-500">
                                 <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z"></path></svg>
                             </div>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <p class="text-sm text-pink-500 font-semibold mb-2">Episodio 1</p>
-                        <h3 class="text-xl font-serif text-purple-900 mb-3">Toma de Tierra y Respiración</h3>
-                        <p class="text-gray-600 text-sm">Descubre cómo el grounding al ritmo del beat te ayuda a conectar con el presente.</p>
+                    
+                    <div class="p-8 relative bg-white">
+                        <p data-i18n="ep1" class="text-sm text-pink-500 font-bold tracking-wider uppercase mb-2 transform group-hover:translate-x-2 transition-transform duration-300">Episodio 1</p>
+                        <h3 data-i18n="vlog1_t" class="text-2xl font-serif text-purple-900 mb-3 transform group-hover:translate-x-2 transition-transform duration-300 delay-75">Toma de Tierra y Respiración</h3>
+                        <p data-i18n="vlog1_d" class="text-gray-600 leading-relaxed transform group-hover:translate-x-2 transition-transform duration-300 delay-150">Descubre cómo el grounding al ritmo del beat te ayuda a conectar con el presente.</p>
+                        <div class="w-0 h-1 bg-gradient-to-r from-pink-500 to-purple-500 mt-6 group-hover:w-full transition-all duration-700 rounded-full"></div>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group cursor-pointer hover:-translate-y-2 transition duration-300" onclick="openVideoModal('videos/episodio2.mp4')">
-                    <div class="h-56 bg-purple-200 relative">
-                         <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/vlog2-thumb.jpg');"></div>
-                         <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition">
-                            <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center text-pink-500 pl-1">
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden group cursor-pointer hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(219,112,147,0.3)] transition-all duration-500" 
+                     onclick="openVideoModal('videos/episodio2.mp4')"
+                     onmouseenter="this.querySelector('.preview-vid').play()"
+                     onmouseleave="this.querySelector('.preview-vid').pause(); this.querySelector('.preview-vid').currentTime = 0;">
+                    
+                    <div class="h-64 relative overflow-hidden bg-purple-900 rounded-t-3xl">
+                        <div class="absolute inset-0 bg-cover bg-center z-10 transition-opacity duration-700 group-hover:opacity-0" style="background-image: url('images/vlog2-thumb.jpg');"></div>
+                        
+                        <video class="preview-vid absolute inset-0 w-full h-full object-cover z-0 transform scale-110 group-hover:scale-100 transition-transform duration-700" muted loop playsinline>
+                            <source src="videos/episodio2.mp4" type="video/mp4">
+                        </video>
+                        
+                        <div class="absolute inset-0 z-20 bg-gradient-to-t from-purple-900/80 via-transparent to-transparent opacity-80 group-hover:opacity-30 transition-opacity duration-500"></div>
+                        
+                        <div class="absolute inset-0 z-30 flex items-center justify-center">
+                            <div class="w-16 h-16 bg-white/20 backdrop-blur-md border border-white/50 rounded-full flex items-center justify-center text-white pl-1 transform group-hover:scale-125 group-hover:bg-pink-500 group-hover:border-pink-500 group-hover:shadow-[0_0_30px_rgba(236,72,153,0.8)] transition-all duration-500">
                                 <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z"></path></svg>
                             </div>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <p class="text-sm text-pink-500 font-semibold mb-2">Episodio 2</p>
-                        <h3 class="text-xl font-serif text-purple-900 mb-3">La Magia del Abrazo</h3>
-                        <p class="text-gray-600 text-sm">Cómo reducir el cortisol y generar oxitocina a través de la coregulación.</p>
+                    
+                    <div class="p-8 relative bg-white">
+                        <p data-i18n="ep2" class="text-sm text-pink-500 font-bold tracking-wider uppercase mb-2 transform group-hover:translate-x-2 transition-transform duration-300">Episodio 2</p>
+                        <h3 data-i18n="vlog2_t" class="text-2xl font-serif text-purple-900 mb-3 transform group-hover:translate-x-2 transition-transform duration-300 delay-75">La Magia del Abrazo</h3>
+                        <p data-i18n="vlog2_d" class="text-gray-600 leading-relaxed transform group-hover:translate-x-2 transition-transform duration-300 delay-150">Cómo reducir el cortisol y generar oxitocina a través de la coregulación.</p>
+                        <div class="w-0 h-1 bg-gradient-to-r from-pink-500 to-purple-500 mt-6 group-hover:w-full transition-all duration-700 rounded-full"></div>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group cursor-pointer hover:-translate-y-2 transition duration-300" onclick="openVideoModal('videos/episodio3.mp4')">
-                    <div class="h-56 bg-pink-300 relative">
-                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/vlog3-thumb.jpg');"></div>
-                        <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition">
-                            <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center text-pink-500 pl-1">
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden group cursor-pointer hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(219,112,147,0.3)] transition-all duration-500" 
+                     onclick="openVideoModal('videos/episodio3.mp4')"
+                     onmouseenter="this.querySelector('.preview-vid').play()"
+                     onmouseleave="this.querySelector('.preview-vid').pause(); this.querySelector('.preview-vid').currentTime = 0;">
+                    
+                    <div class="h-64 relative overflow-hidden bg-purple-900 rounded-t-3xl">
+                        <div class="absolute inset-0 bg-cover bg-center z-10 transition-opacity duration-700 group-hover:opacity-0" style="background-image: url('images/vlog3-thumb.jpg');"></div>
+                        
+                        <video class="preview-vid absolute inset-0 w-full h-full object-cover z-0 transform scale-110 group-hover:scale-100 transition-transform duration-700" muted loop playsinline>
+                            <source src="videos/episodio3.mp4" type="video/mp4">
+                        </video>
+                        
+                        <div class="absolute inset-0 z-20 bg-gradient-to-t from-purple-900/80 via-transparent to-transparent opacity-80 group-hover:opacity-30 transition-opacity duration-500"></div>
+                        
+                        <div class="absolute inset-0 z-30 flex items-center justify-center">
+                            <div class="w-16 h-16 bg-white/20 backdrop-blur-md border border-white/50 rounded-full flex items-center justify-center text-white pl-1 transform group-hover:scale-125 group-hover:bg-pink-500 group-hover:border-pink-500 group-hover:shadow-[0_0_30px_rgba(236,72,153,0.8)] transition-all duration-500">
                                 <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z"></path></svg>
                             </div>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <p class="text-sm text-pink-500 font-semibold mb-2">Episodio 3</p>
-                        <h3 class="text-xl font-serif text-purple-900 mb-3">Flujo y Liberación</h3>
-                        <p class="text-gray-600 text-sm">Kizomba social integrando herramientas de sanación con base de thetahealing.</p>
+                    
+                    <div class="p-8 relative bg-white">
+                        <p data-i18n="ep3" class="text-sm text-pink-500 font-bold tracking-wider uppercase mb-2 transform group-hover:translate-x-2 transition-transform duration-300">Episodio 3</p>
+                        <h3 data-i18n="vlog3_t" class="text-2xl font-serif text-purple-900 mb-3 transform group-hover:translate-x-2 transition-transform duration-300 delay-75">Flujo y Liberación</h3>
+                        <p data-i18n="vlog3_d" class="text-gray-600 leading-relaxed transform group-hover:translate-x-2 transition-transform duration-300 delay-150">Kizomba social integrando herramientas de sanación con base de thetahealing.</p>
+                        <div class="w-0 h-1 bg-gradient-to-r from-pink-500 to-purple-500 mt-6 group-hover:w-full transition-all duration-700 rounded-full"></div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -148,20 +218,20 @@
                 </div>
                 
                 <div class="w-full lg:w-3/5 p-10 md:p-16 flex flex-col justify-center">
-                    <h2 class="text-3xl md:text-4xl font-serif text-purple-900 mb-2">Fundamentación Pedagógica</h2>
-                    <h3 class="text-lg md:text-xl text-pink-500 font-medium mb-10">Profesora de kizomba con 6 años de experiencia. Terapeuta Holística.</h3>
+                    <h2 data-i18n="fun_title" class="text-3xl md:text-4xl font-serif text-purple-900 mb-2">Fundamentación Pedagógica</h2>
+                    <h3 data-i18n="fun_sub" class="text-lg md:text-xl text-pink-500 font-medium mb-10">Profesora de kizomba con 6 años de experiencia. Terapeuta Holística.</h3>
                     
                     <div class="relative mb-10 bg-pink-50/50 p-8 rounded-2xl border-l-4 border-pink-300">
                         <span class="text-7xl text-pink-200 absolute -top-4 -left-4 font-serif opacity-50">"</span>
-                        <p class="text-xl md:text-2xl text-gray-700 italic font-serif leading-relaxed relative z-10">
-                            No enseñamos sólo para llenar una pista sino para vaciar la mente. <br><span class="text-purple-900 font-semibold not-italic">KIZOMBA HEALING</span> es el puente entre el ritmo que golpea el cuerpo y la energía que eleva el alma.
+                        <p data-i18n="fun_quote" class="text-xl md:text-2xl text-gray-700 italic font-serif leading-relaxed relative z-10">
+                            No enseñamos sólo para llenar una pista sino para vaciar el ruido de la mente. <br><span class="text-purple-900 font-semibold not-italic">KIZOMBA HEALING</span> es el puente entre el ritmo que golpea el cuerpo y la energía que eleva el alma.
                         </p>
                         <p class="mt-6 text-right text-purple-800 font-bold tracking-wider uppercase text-sm">— Yanira Mendoza</p>
                     </div>
                     
                     <div>
                         <a href="https://www.instagram.com/yanira.mendoza.oficial" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-purple-900 text-white px-8 py-4 rounded-full hover:bg-pink-500 transition duration-300 font-semibold shadow-md group-hover:-translate-y-1">
-                            + Info en Instagram
+                            <span data-i18n="fun_btn">+ Info en Instagram</span>
                             <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </a>
                     </div>
@@ -174,9 +244,9 @@
     <section id="metodologi" class="py-24 px-4 bg-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-serif text-purple-900 mb-4">La Metodología</h2>
+                <h2 data-i18n="met_title" class="text-4xl font-serif text-purple-900 mb-4">La Metodología</h2>
                 <div class="w-24 h-1 bg-pink-300 mx-auto rounded-full"></div>
-                <p class="text-gray-500 mt-6 max-w-2xl mx-auto">Un viaje de cuatro pasos para conectar el cuerpo, la mente y el alma a través del abrazo y el ritmo.</p>
+                <p data-i18n="met_sub" class="text-gray-500 mt-6 max-w-2xl mx-auto">Un viaje de cuatro pasos para conectar el cuerpo, la mente y el alma a través del abrazo y el ritmo.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -185,9 +255,9 @@
                     <span class="absolute -right-4 -bottom-6 text-9xl font-serif font-bold text-white opacity-70 group-hover:scale-110 transition duration-500">1</span>
                     <div class="relative z-10">
                         <div class="w-12 h-12 bg-pink-200 text-pink-700 rounded-full flex items-center justify-center font-bold text-xl mb-6 shadow-sm">1</div>
-                        <h4 class="text-xl font-semibold text-purple-900 mb-1">Apertura</h4>
-                        <p class="text-sm text-pink-500 font-medium mb-4">Enraizamiento</p>
-                        <p class="text-gray-600 leading-relaxed">Toma de tierra, respiración y grounding a ritmo de beat.</p>
+                        <h4 data-i18n="met1_t" class="text-xl font-semibold text-purple-900 mb-1">Apertura</h4>
+                        <p data-i18n="met1_s" class="text-sm text-pink-500 font-medium mb-4">Enraizamiento</p>
+                        <p data-i18n="met1_d" class="text-gray-600 leading-relaxed">Toma de tierra, respiración y grounding a ritmo de beat.</p>
                     </div>
                 </div>
 
@@ -195,9 +265,9 @@
                     <span class="absolute -right-4 -bottom-6 text-9xl font-serif font-bold text-white opacity-70 group-hover:scale-110 transition duration-500">2</span>
                     <div class="relative z-10">
                         <div class="w-12 h-12 bg-purple-200 text-purple-700 rounded-full flex items-center justify-center font-bold text-xl mb-6 shadow-sm">2</div>
-                        <h4 class="text-xl font-semibold text-purple-900 mb-1">Conexión</h4>
-                        <p class="text-sm text-pink-500 font-medium mb-4">Individual</p>
-                        <p class="text-gray-600 leading-relaxed">Técnica de baile enfocada en el eje propio y el equilibrio emocional.</p>
+                        <h4 data-i18n="met2_t" class="text-xl font-semibold text-purple-900 mb-1">Conexión</h4>
+                        <p data-i18n="met2_s" class="text-sm text-pink-500 font-medium mb-4">Individual</p>
+                        <p data-i18n="met2_d" class="text-gray-600 leading-relaxed">Técnica de baile enfocada en el eje propio y el equilibrio emocional.</p>
                     </div>
                 </div>
 
@@ -205,9 +275,9 @@
                     <span class="absolute -right-4 -bottom-6 text-9xl font-serif font-bold text-white opacity-70 group-hover:scale-110 transition duration-500">3</span>
                     <div class="relative z-10">
                         <div class="w-12 h-12 bg-pink-200 text-pink-700 rounded-full flex items-center justify-center font-bold text-xl mb-6 shadow-sm">3</div>
-                        <h4 class="text-xl font-semibold text-purple-900 mb-1">El abrazo</h4>
-                        <p class="text-sm text-pink-500 font-medium mb-4">Co-regulación</p>
-                        <p class="text-gray-600 leading-relaxed">Aplicación de técnicas de terapia de contacto para reducir el cortisol y generar oxitocina.</p>
+                        <h4 data-i18n="met3_t" class="text-xl font-semibold text-purple-900 mb-1">El abrazo</h4>
+                        <p data-i18n="met3_s" class="text-sm text-pink-500 font-medium mb-4">Co-regulación</p>
+                        <p data-i18n="met3_d" class="text-gray-600 leading-relaxed">Aplicación de técnicas de terapia de contacto para reducir el cortisol y generar oxitocina.</p>
                     </div>
                 </div>
 
@@ -215,9 +285,9 @@
                     <span class="absolute -right-4 -bottom-6 text-9xl font-serif font-bold text-white opacity-70 group-hover:scale-110 transition duration-500">4</span>
                     <div class="relative z-10">
                         <div class="w-12 h-12 bg-purple-200 text-purple-700 rounded-full flex items-center justify-center font-bold text-xl mb-6 shadow-sm">4</div>
-                        <h4 class="text-xl font-semibold text-purple-900 mb-1">Liberación</h4>
-                        <p class="text-sm text-pink-500 font-medium mb-4">Flujo</p>
-                        <p class="text-gray-600 leading-relaxed">Kizomba social integrando herramientas de sanación con base de thetahealing.</p>
+                        <h4 data-i18n="met4_t" class="text-xl font-semibold text-purple-900 mb-1">Liberación</h4>
+                        <p data-i18n="met4_s" class="text-sm text-pink-500 font-medium mb-4">Flujo</p>
+                        <p data-i18n="met4_d" class="text-gray-600 leading-relaxed">Kizomba social integrando herramientas de sanación con base de thetahealing.</p>
                     </div>
                 </div>
 
@@ -230,27 +300,27 @@
         
         <div class="max-w-6xl mx-auto relative z-10">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-serif text-pink-100 mb-4">Beneficios para el Evento</h2>
-                <p class="text-purple-300 text-lg">Por qué incorporar Kizomba Healing en tu próximo taller</p>
+                <h2 data-i18n="ben_title" class="text-3xl md:text-4xl font-serif text-pink-100 mb-4">Beneficios para el Evento</h2>
+                <p data-i18n="ben_sub" class="text-purple-300 text-lg">Por qué incorporar Kizomba Healing en tu próximo taller</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-3xl hover:bg-white/20 transition duration-300 transform hover:-translate-y-1">
                     <div class="text-4xl mb-6 bg-white/20 w-16 h-16 rounded-2xl flex items-center justify-center shadow-inner">✨</div>
-                    <h4 class="text-2xl font-semibold text-pink-200 mb-3">Diferenciación</h4>
-                    <p class="text-purple-100 leading-relaxed">Concepto único que nadie más ofrece. Tu evento adquiere otro nivel y se distingue del resto.</p>
+                    <h4 data-i18n="ben1_t" class="text-2xl font-semibold text-pink-200 mb-3">Diferenciación</h4>
+                    <p data-i18n="ben1_d" class="text-purple-100 leading-relaxed">Concepto único que nadie más ofrece. Tu evento adquiere otro nivel y se distingue del resto.</p>
                 </div>
                 
                 <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-3xl hover:bg-white/20 transition duration-300 transform hover:-translate-y-1 md:-translate-y-4">
                     <div class="text-4xl mb-6 bg-white/20 w-16 h-16 rounded-2xl flex items-center justify-center shadow-inner">🌿</div>
-                    <h4 class="text-2xl font-semibold text-pink-200 mb-3">Bienestar</h4>
-                    <p class="text-purple-100 leading-relaxed">Los alumnos terminan el taller renovados, sintiéndose mejor consigo mismos, hablando de él y de tu evento.</p>
+                    <h4 data-i18n="ben2_t" class="text-2xl font-semibold text-pink-200 mb-3">Bienestar</h4>
+                    <p data-i18n="ben2_d" class="text-purple-100 leading-relaxed">Los alumnos terminan el taller renovados, sintiéndose mejor consigo mismos, hablando de él y de tu evento.</p>
                 </div>
                 
                 <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-3xl hover:bg-white/20 transition duration-300 transform hover:-translate-y-1">
                     <div class="text-4xl mb-6 bg-white/20 w-16 h-16 rounded-2xl flex items-center justify-center shadow-inner">🤝</div>
-                    <h4 class="text-2xl font-semibold text-pink-200 mb-3">Comunidad</h4>
-                    <p class="text-purple-100 leading-relaxed">Crea vínculos reales, profundos y duraderos entre los participantes. ¡No lo olvidarán!</p>
+                    <h4 data-i18n="ben3_t" class="text-2xl font-semibold text-pink-200 mb-3">Comunidad</h4>
+                    <p data-i18n="ben3_d" class="text-purple-100 leading-relaxed">Crea vínculos reales, profundos y duraderos entre los participantes. ¡No lo olvidarán!</p>
                 </div>
             </div>
         </div>
@@ -260,7 +330,7 @@
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
             <div class="text-center md:text-left mb-6 md:mb-0">
                 <h3 class="text-2xl font-serif font-bold text-pink-400">Kizomba Healing</h3>
-                <p class="text-gray-400 mt-2">Profesora de kizomba con 6 años de experiencia.<br>Terapeuta Holística.</p>
+                <p data-i18n="foot_desc" class="text-gray-400 mt-2">Profesora de kizomba con 6 años de experiencia.<br>Terapeuta Holística.</p>
             </div>
             <div class="text-center md:text-right">
                 <a href="mailto:info.yanira.mendoza@gmail.com" class="inline-block border border-pink-500 text-pink-400 px-6 py-2 rounded-full hover:bg-pink-500 hover:text-white transition">
