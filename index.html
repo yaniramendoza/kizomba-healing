@@ -15,6 +15,9 @@
     </style>
     <script src="translations.js" defer></script>
     <script src="script.js" defer></script>
+    
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </head>
 <body class="bg-pink-50 text-gray-800 antialiased selection:bg-purple-300 selection:text-purple-900">
 
@@ -29,7 +32,8 @@
                     <a href="#metodologi" data-i18n="nav_metodo" class="text-gray-600 hover:text-pink-500 transition duration-300">Metodología</a>
                     <a href="#vlogs" data-i18n="nav_vlogs" class="text-gray-600 hover:text-pink-500 transition duration-300">Vlogs</a>
                     <a href="#priser" data-i18n="nav_oferta" class="text-gray-600 hover:text-pink-500 transition duration-300">Oferta</a>
-                    <a href="#kontakt" data-i18n="nav_contacto" class="bg-gradient-to-r from-purple-600 to-pink-500 text-white px-6 py-2 rounded-full hover:shadow-lg hover:scale-105 transition transform duration-300">Contacto</a>
+                    
+                    <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/dit-calendly-link'});return false;" data-i18n="nav_contacto" class="bg-gradient-to-r from-purple-600 to-pink-500 text-white px-6 py-2 rounded-full hover:shadow-lg hover:scale-105 transition transform duration-300">Contacto</a>                    
                     
                     <button onclick="toggleLanguage()" class="flex items-center hover:opacity-70 border-l border-pink-200 pl-4 ml-2 transition" title="Cambiar idioma / Change language">
                         <img src="https://flagcdn.com/w40/gb.png" class="lang-flag-img w-7 h-auto rounded-sm shadow-sm" alt="Language">
@@ -54,23 +58,32 @@
     </nav>
 
     <section class="pt-32 pb-20 px-4 min-h-[80vh] flex items-center bg-gradient-to-br from-pink-100 via-white to-purple-100 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
-            <div class="space-y-6">
-                <h2 class="text-pink-500 font-semibold tracking-widest uppercase text-sm">Yanira Mendoza</h2>
-                <h1 data-i18n="hero_title" class="text-5xl md:text-6xl font-serif font-bold text-purple-900 leading-tight">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center relative z-10">
+            
+            <div class="space-y-5 md:space-y-6">
+                <h2 class="text-pink-500 font-semibold tracking-widest uppercase text-xs md:text-sm">Yanira Mendoza</h2>
+                
+                <h1 data-i18n="hero_title" class="text-4xl md:text-5xl lg:text-[3.25rem] font-serif font-bold text-purple-900 leading-tight">
                     El arte de la sanación a través del abrazo
                 </h1>
-                <p data-i18n="hero_desc" class="text-lg text-gray-600 leading-relaxed">
-                    KIZOMBA HEALING es el puente entre el ritmo que golpea el cuerpo y la energía que eleva el alma. No enseñamos sólo para llenar una pista, sino para vaciar la mente.
+                
+                <p data-i18n="hero_desc" class="text-base md:text-lg text-gray-600 leading-relaxed max-w-lg">
+                    ¿Bailar o sanar? Aquí hacemos las dos.
+                    El puente entre tu cuerpo y tu alma empieza aquí.
                 </p>
-                <div class="pt-4">
-                    <a href="#vlogs" data-i18n="hero_btn" class="inline-block bg-purple-900 text-white px-8 py-4 rounded-full shadow-xl hover:bg-pink-600 transition duration-300 text-lg">Descubre los Vlogs</a>
+                
+                <div class="pt-2 md:pt-4">
+                    <a href="#vlogs" data-i18n="hero_btn" class="inline-block bg-purple-900 text-white px-7 py-3.5 md:px-8 md:py-4 rounded-full shadow-xl hover:bg-pink-600 transition duration-300 text-base md:text-lg font-medium">
+                        Descubre los Vlogs
+                    </a>
                 </div>
             </div>
-           <div class="relative h-[450px] md:h-[550px] lg:h-[650px] rounded-3xl overflow-hidden shadow-2xl bg-purple-200 group w-full">
-    <div class="absolute inset-0 bg-cover bg-top transition duration-500 group-hover:scale-105" style="background-image: url('images/mainposter.jpg');"></div>
-    <div class="absolute inset-0 bg-gradient-to-t from-purple-900/60 via-purple-900/20 to-transparent"></div>
-</div>
+
+            <div class="relative h-[380px] md:h-[425px] lg:h-[510px] w-[90%] md:w-[85%] mx-auto md:ml-auto md:mr-0 rounded-3xl overflow-hidden shadow-2xl bg-purple-200 group">
+                <div class="absolute inset-0 bg-cover bg-top transition duration-500 group-hover:scale-105" style="background-image: url('images/mainposter.jpg');"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-purple-900/60 via-purple-900/20 to-transparent"></div>
+            </div>
+
         </div>
     </section>
 
@@ -141,7 +154,7 @@
                     <div class="p-8 relative bg-white">
                         <p data-i18n="ep1" class="text-sm text-pink-500 font-bold tracking-wider uppercase mb-2 transform group-hover:translate-x-2 transition-transform duration-300">Episodio 1</p>
                         <h3 data-i18n="vlog1_t" class="text-2xl font-serif text-purple-900 mb-3 transform group-hover:translate-x-2 transition-transform duration-300 delay-75">Toma de Tierra y Respiración</h3>
-                        <p data-i18n="vlog1_d" class="text-gray-600 leading-relaxed transform group-hover:translate-x-2 transition-transform duration-300 delay-150">Descubre cómo el grounding al ritmo del beat te ayuda a conectar con el presente.</p>
+                        <p data-i18n="vlog1_d" class="text-gray-600 leading-relaxed transform group-hover:translate-x-2 transition-transform duration-300 delay-150">La mejor forma de abrir el taller mediante una técnica específica. Mediante el retorno a nuestro propio ser, preparamos el cuerpo para la sanación.</p>
                         <div class="w-0 h-1 bg-gradient-to-r from-pink-500 to-purple-500 mt-6 group-hover:w-full transition-all duration-700 rounded-full"></div>
                     </div>
                 </div>
@@ -170,7 +183,7 @@
                     <div class="p-8 relative bg-white">
                         <p data-i18n="ep2" class="text-sm text-pink-500 font-bold tracking-wider uppercase mb-2 transform group-hover:translate-x-2 transition-transform duration-300">Episodio 2</p>
                         <h3 data-i18n="vlog2_t" class="text-2xl font-serif text-purple-900 mb-3 transform group-hover:translate-x-2 transition-transform duration-300 delay-75">La Magia del Abrazo</h3>
-                        <p data-i18n="vlog2_d" class="text-gray-600 leading-relaxed transform group-hover:translate-x-2 transition-transform duration-300 delay-150">Cómo reducir el cortisol y generar oxitocina a través de la coregulación.</p>
+                        <p data-i18n="vlog2_d" class="text-gray-600 leading-relaxed transform group-hover:translate-x-2 transition-transform duration-300 delay-150">Descubre como el abrazo reduce el cortisol y generar oxitocina.</p>
                         <div class="w-0 h-1 bg-gradient-to-r from-pink-500 to-purple-500 mt-6 group-hover:w-full transition-all duration-700 rounded-full"></div>
                     </div>
                 </div>
@@ -199,7 +212,7 @@
                     <div class="p-8 relative bg-white">
                         <p data-i18n="ep3" class="text-sm text-pink-500 font-bold tracking-wider uppercase mb-2 transform group-hover:translate-x-2 transition-transform duration-300">Episodio 3</p>
                         <h3 data-i18n="vlog3_t" class="text-2xl font-serif text-purple-900 mb-3 transform group-hover:translate-x-2 transition-transform duration-300 delay-75">Flujo y Liberación</h3>
-                        <p data-i18n="vlog3_d" class="text-gray-600 leading-relaxed transform group-hover:translate-x-2 transition-transform duration-300 delay-150">Kizomba social integrando herramientas de sanación con base de thetahealing.</p>
+                        <p data-i18n="vlog3_d" class="text-gray-600 leading-relaxed transform group-hover:translate-x-2 transition-transform duration-300 delay-150">Cómo se integra la Kizomba social con base de thetahealing, una herramienta de sanación nunca antes usada en la danza.</p>
                         <div class="w-0 h-1 bg-gradient-to-r from-pink-500 to-purple-500 mt-6 group-hover:w-full transition-all duration-700 rounded-full"></div>
                     </div>
                 </div>
@@ -258,6 +271,11 @@
                         <h4 data-i18n="met1_t" class="text-xl font-semibold text-purple-900 mb-1">Apertura</h4>
                         <p data-i18n="met1_s" class="text-sm text-pink-500 font-medium mb-4">Enraizamiento</p>
                         <p data-i18n="met1_d" class="text-gray-600 leading-relaxed">Toma de tierra, respiración y grounding a ritmo de beat.</p>
+                        <div class="mt-6 pt-4 border-t border-purple-200/50">
+                            <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/dit-calendly-link'});return false;" class="text-sm font-bold text-purple-600 hover:text-pink-500 transition flex items-center uppercase tracking-wider">
+                                Reservar <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -268,6 +286,11 @@
                         <h4 data-i18n="met2_t" class="text-xl font-semibold text-purple-900 mb-1">Conexión</h4>
                         <p data-i18n="met2_s" class="text-sm text-pink-500 font-medium mb-4">Individual</p>
                         <p data-i18n="met2_d" class="text-gray-600 leading-relaxed">Técnica de baile enfocada en el eje propio y el equilibrio emocional.</p>
+                        <div class="mt-6 pt-4 border-t border-pink-200/50">
+                            <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/dit-calendly-link'});return false;" class="text-sm font-bold text-pink-600 hover:text-purple-600 transition flex items-center uppercase tracking-wider">
+                                Reservar <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -278,6 +301,11 @@
                         <h4 data-i18n="met3_t" class="text-xl font-semibold text-purple-900 mb-1">El abrazo</h4>
                         <p data-i18n="met3_s" class="text-sm text-pink-500 font-medium mb-4">Co-regulación</p>
                         <p data-i18n="met3_d" class="text-gray-600 leading-relaxed">Aplicación de técnicas de terapia de contacto para reducir el cortisol y generar oxitocina.</p>
+                        <div class="mt-6 pt-4 border-t border-purple-200/50">
+                            <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/dit-calendly-link'});return false;" class="text-sm font-bold text-purple-600 hover:text-pink-500 transition flex items-center uppercase tracking-wider">
+                                Reservar <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -288,6 +316,11 @@
                         <h4 data-i18n="met4_t" class="text-xl font-semibold text-purple-900 mb-1">Liberación</h4>
                         <p data-i18n="met4_s" class="text-sm text-pink-500 font-medium mb-4">Flujo</p>
                         <p data-i18n="met4_d" class="text-gray-600 leading-relaxed">Kizomba social integrando herramientas de sanación con base de thetahealing.</p>
+                        <div class="mt-6 pt-4 border-t border-pink-200/50">
+                            <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/dit-calendly-link'});return false;" class="text-sm font-bold text-pink-600 hover:text-purple-600 transition flex items-center uppercase tracking-wider">
+                                Reservar <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -333,8 +366,8 @@
                 <p data-i18n="foot_desc" class="text-gray-400 mt-2">Profesora de kizomba con 6 años de experiencia.<br>Terapeuta Holística.</p>
             </div>
             <div class="text-center md:text-right">
-                <a href="mailto:info.yanira.mendoza@gmail.com" class="inline-block border border-pink-500 text-pink-400 px-6 py-2 rounded-full hover:bg-pink-500 hover:text-white transition">
-                    info.yanira.mendoza@gmail.com
+                <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/dit-calendly-link'});return false;" class="inline-block border border-pink-500 text-pink-400 px-6 py-2 rounded-full hover:bg-pink-500 hover:text-white transition cursor-pointer">
+                    Reserva tu sesión / Book now
                 </a>
             </div>
         </div>
