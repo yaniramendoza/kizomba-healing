@@ -59,3 +59,4 @@ videoModal.addEventListener('click', (e) => {
         closeVideoModal();
     }
 });
+
